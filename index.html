@@ -1,11 +1,72 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>[Name] [Surname] - Recruitment task</title>
-</head>
-<body>
 
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="This is an example frontend developer recruitment task.">
+  <title>Tomasz Ikert - Recruitment task</title>
+  <script src="https://kit.fontawesome.com/1c8755ade1.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./dist/main.css" />
+</head>
+
+<body>
+  <main>
+    <div class="main__container">
+      <picture class="hero__image">
+        <source srcset="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale_w_784.webp 505w, 
+          images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale_w_1002.webp 505w"
+          sizes="(min-width: 64em) 50vw, (min-width: 40em) 60vw">
+        <img class="image" src="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale_w_1400.webp" alt="The beach">
+      </picture>
+      <div class="container">
+        <h1 class="header">Lorem Ipsum</h1>
+        <p class="description">
+          Infinitely scalable, feature-rich and cloud-native data management and
+          protection for modern and legacy infrastructures and SaaS platforms,
+          managed via a single app with no hardware required.
+        </p>
+        <button class="open-modal-button">Button</button>
+      </div>
+    </div>
+    <div class="overlay">
+      <dialog class="dialog">
+        <div class="dialog__container">
+          <h2 class="header">Alert!</h2>
+          <i class="fas fa-times"></i>
+          <p class="info">
+            You have clicked <span class="number-of-clicks"></span> to related
+            button.
+          </p>
+          <button class="reset-clicks-button">Reset</button>
+          <table class="table">
+            <thead class="tableHeader">
+              <tr>
+                <th colspan="1">No.</th>
+                <th colspan="1">Name</th>
+                <th colspan="1">Email</th>
+                <th colspan="1">Address</th>
+                <th colspan="1">Phone No.</th>
+                <th colspan="1">Company</th>
+              </tr>
+            </thead>
+            <tbody class="tableBody">
+            </tbody>
+          </table>
+          <div class="loader__container">
+            <span class="loader"></span>
+          </div>
+        </div>
+    </div>
+    </dialog>
+    </div>
+  </main>
 </body>
+
+<script type="module" src="./src/js/main.js"></script>
+
+</html>
