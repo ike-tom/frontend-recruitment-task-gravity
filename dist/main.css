@@ -1,2 +1,239 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #e5e5e5;
+  font-family: "Roboto", sans-serif;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.visible {
+  display: block;
+}
+
+.dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  width: 920px;
+  padding: 0;
+}
+@media screen and (max-width: 1024px) {
+  .dialog {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .dialog {
+    width: 100%;
+  }
+}
+.dialog .dialog__container {
+  margin: 56px 95px;
+}
+@media screen and (max-width: 767px) {
+  .dialog .dialog__container {
+    margin: 10px;
+  }
+}
+.dialog .dialog__container .header {
+  margin: 0;
+  font-size: 42px;
+  line-height: 50px;
+  font-weight: 700;
+}
+@media screen and (max-width: 767px) {
+  .dialog .dialog__container .header {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+.dialog .dialog__container .fa-times {
+  position: absolute;
+  top: 46px;
+  right: 46px;
+  width: 12px;
+  color: #000;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.dialog .dialog__container .fa-times:hover {
+  color: #965532;
+}
+@media screen and (max-width: 767px) {
+  .dialog .dialog__container .fa-times {
+    top: 15px;
+    right: 20px;
+  }
+}
+.dialog .dialog__container .info {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+}
+.dialog .dialog__container .info .number-of-clicks {
+  font-weight: 700;
+}
+.dialog .dialog__container .reset-clicks-button {
+  transition: background-color 0.3s;
+  border: none;
+  border-radius: 32px;
+  width: 128px;
+  height: 48px;
+  padding: 16px 40px;
+  background-color: #e4c1ae;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  display: none;
+  margin-bottom: 24px;
+}
+.dialog .dialog__container .reset-clicks-button:hover {
+  background-color: #965532;
+}
+.dialog .dialog__container .table {
+  border: 3px solid #e4c1ae;
+  border-collapse: collapse;
+  width: 100%;
+}
+.dialog .dialog__container .table th,
+.dialog .dialog__container .table td {
+  border: 1px solid #e4c1ae;
+  font-size: 12px;
+}
+@media screen and (max-width: 767px) {
+  .dialog .dialog__container .table th,
+.dialog .dialog__container .table td {
+    font-size: 8px;
+    word-wrap: break-word;
+  }
+}
+.dialog .dialog__container .loader__container {
+  text-align: center;
+}
+.dialog .dialog__container .loader__container .loader {
+  display: block;
+  animation: rotation 1s linear infinite;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 5px solid #e4c1ae;
+  border-bottom-color: transparent;
+  margin: 16px auto;
+}
+
+.active {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(18, 18, 18, 0.5);
+}
+
+.visible {
+  display: block;
+}
+
+.main__container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 505px 380px;
+  grid-template-rows: 330px;
+  grid-column-gap: 95px;
+  overflow: hidden;
+  margin-top: 96px;
+}
+@media screen and (max-width: 1024px) {
+  .main__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+.main__container .hero__image {
+  grid-area: 1/1/2/2;
+  width: 505px;
+}
+@media screen and (max-width: 1024px) {
+  .main__container .hero__image {
+    grid-area: 1/1/2/2;
+    width: auto;
+  }
+}
+.main__container .image {
+  width: 505px;
+}
+@media screen and (max-width: 767px) {
+  .main__container .image {
+    width: 320px;
+  }
+}
+.main__container .container {
+  grid-area: 1/2/2/3;
+  width: 380px;
+}
+@media screen and (max-width: 1024px) {
+  .main__container .container {
+    grid-area: 2/1/3/2;
+    width: auto;
+  }
+}
+.main__container .container .description {
+  margin-top: 24px;
+  margin-bottom: 32px;
+  line-height: 24px;
+  font-weight: 300;
+}
+@media screen and (max-width: 1024px) {
+  .main__container .container .description {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.main__container .container .open-modal-button {
+  transition: background-color 0.3s;
+  border: none;
+  border-radius: 32px;
+  width: 128px;
+  height: 48px;
+  padding: 16px 40px;
+  background-color: #e4c1ae;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+}
+.main__container .container .open-modal-button:hover {
+  background-color: #965532;
+}
+
+.error-message {
+  margin-top: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #ff0000;
+}
 
 /*# sourceMappingURL=main.css.map */
