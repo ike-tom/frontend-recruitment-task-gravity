@@ -1,0 +1,77 @@
+.active {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba($background-color, 0.5);
+}
+
+.visible {
+  display: block;
+}
+
+.main__container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 505px 380px;
+  grid-template-rows: 330px;
+  grid-column-gap: 95px;
+  overflow: hidden;
+  margin-top: 96px;
+
+  @media screen and (max-width: #{$desktop-width}) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .hero__image {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 505px;
+    @media screen and (max-width: #{$desktop-width}) {
+      grid-area: 1 / 1 / 2 / 2;
+      width: auto;
+    }
+  }
+  .image {
+    width: 505px;
+    @media screen and (max-width: #{$tablet-width}) {
+      width: 320px;
+    }
+  }
+  .container {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 380px;
+    @media screen and (max-width: #{$desktop-width}) {
+      grid-area: 2 / 1 / 3 / 2;
+      width: auto;
+    }
+    .description {
+      margin-top: 24px;
+      margin-bottom: 32px;
+      line-height: 24px;
+      font-weight: 300;
+      @media screen and (max-width: #{$desktop-width}) {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+    .open-modal-button {
+      @include buttonStyles;
+    }
+  }
+}
+
+.error-message {
+  margin-top: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: $error-message-color;
+}

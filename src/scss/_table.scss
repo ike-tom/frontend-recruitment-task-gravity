@@ -1,0 +1,95 @@
+.visible {
+  display: block;
+}
+
+.dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  width: 920px;
+  padding: 0;
+  @media screen and (max-width: #{$desktop-width}) {
+    width: 700px;
+  }
+  @media screen and (max-width: #{$tablet-width}) {
+    width: 100%;
+  }
+
+  .dialog__container {
+    margin: 56px 95px;
+    @media screen and (max-width: #{$tablet-width}) {
+      margin: 10px;
+    }
+    .header {
+      margin: 0;
+      font-size: 42px;
+      line-height: 50px;
+      font-weight: 700;
+      @media screen and (max-width: #{$tablet-width}) {
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
+    .fa-times {
+      position: absolute;
+      top: 46px;
+      right: 46px;
+      width: 12px;
+      color: $icon-color;
+      cursor: pointer;
+      transition: color 0.3s;
+      &:hover {
+        color: $button-background-darker;
+      }
+      @media screen and (max-width: #{$tablet-width}) {
+        top: 15px;
+        right: 20px;
+      }
+    }
+    .info {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 300;
+      .number-of-clicks {
+        font-weight: 700;
+      }
+    }
+    .reset-clicks-button {
+      @include buttonStyles;
+      display: none;
+      margin-bottom: 24px;
+    }
+    .table {
+      border: 3px solid $secondary-background-color;
+      border-collapse: collapse;
+      width: 100%;
+      th,
+      td {
+        border: 1px solid $secondary-background-color;
+        font-size: 12px;
+        @media screen and (max-width: #{$tablet-width}) {
+          font-size: 8px;
+          word-wrap: break-word;
+        }
+      }
+    }
+    .loader__container {
+      text-align: center;
+      .loader {
+        display: block;
+        animation: rotation 1s linear infinite;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        border: 5px solid $secondary-background-color;
+        border-bottom-color: transparent;
+        margin: 16px auto;
+      }
+    }
+  }
+}
