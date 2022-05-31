@@ -21,5 +21,4 @@ test("clearTableBody", () => {
   const tableBody = document.querySelector(".tableBody")
   clearTableBody()
   expect(tableBody.innerHTML).toBe("")
-  // expect(tableBody).toBeNull()
 })
